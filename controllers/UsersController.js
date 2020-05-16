@@ -3,14 +3,14 @@ const User = require("../models/Users");
 // Rendering Sign Up page
 module.exports.signUpPage = function (req, res) {
   return res.render("signup", {
-    title: "App | Sign Up",
+    title: "TeachFinder | Sign Up",
   });
 };
 
 // Rendering Sign In page
 module.exports.signInPage = function (req, res) {
   return res.render("signin", {
-    title: "App | Sign In",
+    title: "TeachFinder | Sign In",
   });
 };
 

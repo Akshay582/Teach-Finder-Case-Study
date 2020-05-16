@@ -1,7 +1,45 @@
 # Teach-Finder-Case-Study
 
-create a session using passport local, nothing fancy
+### Features
 
-The view should only render the data of user stored in the browser if no one is logged in else show all the data.
+- The app has three pages:
 
-templating engine - ejs
+  - Sign Up
+  - Sign In
+  - Home
+
+- Run the following commands one by one in the directory of the project and the server will start running at `PORT: 8000`.
+
+  ```
+  npm install
+  npm start
+  ```
+
+- The root page will be empty initially as their is no data to the connected mongo dB database. Their will be only two links: `SignUp` and `SignIn`.  Use the signup to store the credentials of the user into the DB. After that sign in and that will create a session for you.
+
+- After signing in, a text box will appear and you can enter data into it, which will immediately appear into the area below. The styling is not fancy, very simple.
+
+### Technology stack:
+
+- Node js
+- Express js
+- EJS
+- Mongo DB
+- HTML, SCSS
+
+### Technique for creating a session in express:
+
+I have used passport and passport-local to create a session and authenticate a user, no fancy authentication used.
+
+### Frontend
+
+- The templating engine used is **ejs**.
+- The CSS preprocessor used is **sass**.
+
+### Database
+
+- The dbms system used is **MongoDB**.
+
+
+
+
