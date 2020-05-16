@@ -23,7 +23,7 @@
 
 - After signing in, you will be redirected to the homepage and **you can enter your one liner notes in textbox in homepage and they will appear below the text box**.
 
--The styling is not fancy, very simple.
+- The styling is not fancy, very simple.
 
 ### Technology stack:
 
