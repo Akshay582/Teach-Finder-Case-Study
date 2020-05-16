@@ -17,13 +17,13 @@
 
 - The root page will be empty initially as their is no data to the connected mongo dB database. 
 
--Their will be only two links: `SignUp` and `SignIn` initially in the store.  
+- Their will be only two links: `SignUp` and `SignIn` initially in the store.  
 
--Sign Up with valid credentials. After signing up successfully, you will be redirected to signin page automatically.
+- Sign Up with valid credentials. After signing up successfully, you will be redirected to signin page automatically.
 
--After signing in, you will be redirected to the homepage and **you can enter your one liner notes in textbox in homepage and they will appear below the text box**.
+- After signing in, you will be redirected to the homepage and **you can enter your one liner notes in textbox in homepage and they will appear below the text box**.
 
-- After signing in, a text box will appear and you can enter data into it, which will immediately appear into the area below. The styling is not fancy, very simple.
+-The styling is not fancy, very simple.
 
 ### Technology stack:
 
