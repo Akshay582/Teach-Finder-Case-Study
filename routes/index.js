@@ -1,22 +1,14 @@
 const express = require("express");
 const router = express.Router();
 
-const UsersController = require("../controllers/UsersController");
+const NotesController = require("../controllers/NotesController");
 const HomeController = require("../controllers/HomeController");
 
-// Route of a signup page
-router.get("/user/signupPage", UsersController.signUpPage);
-
-// Route of a signin page
-router.get("/user/signinPage", UsersController.signInPage);
-
-// Route for the sign up information
-router.post("/user/signup", UsersController.signUp);
-
-// Route for the sign in information
-router.post("/user/signin", UsersController.signIn);
+router.use("/user", require("./user"));
 
 // Route for the homepage
 router.get("/", HomeController.home);
+
+router.post("/notes/create", NotesController.create);
 
 module.exports = router;

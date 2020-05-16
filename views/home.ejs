@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <a href="/user/signupPage">SignUp</a>
+    <a href="/user/SigninPage">SignIn</a>
+    <% if(locals.user) {%>
+    <a href="/user/logout">Logout</a>
+    <form action="/notes/create" id="new-post-form" method="POST">
+      <textarea
+        name="content"
+        cols="25"
+        rows="3"
+        placeholder="Your text here please..."
+        required
+      ></textarea>
+      <input type="submit" value="Post" />
+    </form>
+    <% } %>
+    <div id="posts-list-container">
+      <ul>
+        <% for(note of notes) {%>
+        <li>
+          <h1>
+            <%= note.content %>
+          </h1>
+          <span style="color: blue;">
+            <%= note.username.username %>
+          </span>
+        </li>
+        <hr />
+        <% } %>
+      </ul>
+    </div>
+    <div id="posts-list-container"></div>
+  </body>
+</html>

@@ -16,7 +16,7 @@ module.exports.signInPage = function (req, res) {
 
 // Sign Up for the user
 module.exports.signUp = function (req, res) {
-  let username = req.body.name;
+  let username = req.body.username;
   let password = req.body.password;
   User.findOne({ username }, function (err, user) {
     if (err) {
@@ -35,22 +35,11 @@ module.exports.signUp = function (req, res) {
 
 // Sign In for the user
 module.exports.signIn = function (req, res) {
-  // check for both username and password
-  let username = req.body.name;
-  let password = req.body.password;
-  User.findOne({ username }, function (error, user) {
-    if (error) {
-      return console.error("Encountered an error: ", error);
-    }
-    if (!user) {
-      return res.redirect("/user/signupPage");
-    } else if (user.password !== password) {
-      return res.redirect("/user/signinPage");
-    } else {
-      return res.redirect("/");
-    }
-  });
+  return res.redirect("/");
 };
 
 // Log Out by the user
-module.exports.logout = function (req, res) {};
+module.exports.logout = function (req, res) {
+  req.logout();
+  return res.redirect("/user/signinPage");
+};
